@@ -51,7 +51,7 @@ function requestUserRepos(username) {
             li.classList.add('list-group-item')
                 // Create the html markup for each li
             li.innerHTML = (`
-                <p><strong>No account exists with username:</strong> ${username}</p>`);
+                <p><strong>No repos found for:</strong> ${username}</p>`);
             // Append each li to the ul
             ul.appendChild(li);
         } else {
@@ -59,7 +59,7 @@ function requestUserRepos(username) {
             // Get the ul with id of of userRepos
             let ul = document.getElementById('userRepos');
             let p = document.createElement('p');
-            p.innerHTML = (`<p><strong>Number of Public Repos:${data.length}</p>`)
+            p.innerHTML = (`<p><strong>Repos found:${data.length}</p>`)
             ul.appendChild(p);
             // Loop over each object in data array
             for (let i in data) {
